@@ -8,7 +8,7 @@ namespace Movies.Models.Models
 {
     public class Movie
     {
-        public string Id { get; set; }
+        public string ImdbID { get; set; }
 
         public string Language { get; set; }
 
