@@ -1,5 +1,4 @@
-{
-    "movies": [
+[
         {
             "Language": "ENGLISH",
             "Location": "PUNE",
@@ -191,4 +190,3 @@
             "listingType": "NOW_SHOWING"
         }
     ]
-}

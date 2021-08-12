@@ -18,7 +18,7 @@ namespace Movies.Services.Repository
 
         public InMemoryMovieRepository()
         {
-            this.movieList = this.LoadData
+            this.movieList = this.LoadData();
             this.queryAble =  this.movieList.AsQueryable<Movie>();
         }
 
@@ -41,14 +41,16 @@ namespace Movies.Services.Repository
         private List<Movie> LoadData()
         {
             List<Movie> movies;
-            //read form local json
-            using (StreamReader streamReader = new StreamReader("./movies.json"))
+            //read from local json
+            using (StreamReader streamReader = new StreamReader("../Movies.Services/Repository/movies.json"))
             {
                 var json = streamReader.ReadToEnd();
                 movies = JsonConvert.DeserializeObject<List<Movie>>(json);
             }
 
             return movies;
+
+            this.queryAble.w
         }
     }
 }
