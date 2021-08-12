@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Movies.Controllers
+namespace Movies.WebApi
 {
     public class Program
     {

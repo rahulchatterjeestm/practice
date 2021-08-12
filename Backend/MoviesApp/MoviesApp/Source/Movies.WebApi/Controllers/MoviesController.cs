@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Movies.Controllers.Controllers
+namespace Movies.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

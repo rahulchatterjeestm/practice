@@ -7,7 +7,7 @@ using Microsoft.OpenApi.Models;
 using Movies.Services.Repository;
 using Movies.Services.Services;
 
-namespace Movies.Controllers
+namespace Movies.WebApi
 {
     public class Startup
     {
