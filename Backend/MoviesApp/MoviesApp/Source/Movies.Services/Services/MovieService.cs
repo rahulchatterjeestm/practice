@@ -10,27 +10,24 @@ namespace Movies.Services.Services
 {
     public class MovieService: IMovieService
     {
-        private readonly IQueryable<Movie> queryAble;
+        private readonly IMovieRepository movieRepository;
 
         public MovieService(IMovieRepository movieRepository)
         {
-            this.queryAble = movieRepository.AsQueryable();
+            this.movieRepository = movieRepository;
         }
 
-        public Movie GetMovies(string id = null)
+        public Movie GetMovie(string id)
         {
-            var query = this.queryAble;
-            if(!string.IsNullOrEmpty(id))
-            {
-                query = query.Where(x => x.ImdbID == id);
-            }
+            var query = this.movieRepository.AsQueryable();;
+            query = query.Where(x => x.ImdbID == id);            
 
-            return query.Single();
+            return query.FirstOrDefault();
         }
 
-        public List<Movie> SearchMovies(string location = null, string language = null)
+        public List<Movie> GetMovies(string location = null, string language = null)
         {
-            var query = this.queryAble;
+            var query = this.movieRepository.AsQueryable();
 
             if (!string.IsNullOrEmpty(location))
             {

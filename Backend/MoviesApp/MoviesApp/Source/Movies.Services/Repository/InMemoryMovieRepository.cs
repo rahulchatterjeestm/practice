@@ -49,8 +49,6 @@ namespace Movies.Services.Repository
             }
 
             return movies;
-
-            this.queryAble.w
         }
     }
 }
