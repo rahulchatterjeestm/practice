@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{99F3102F-2C16-40AF-B51C-F0CB22366837}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{FF25AB8C-664C-4DE6-9826-AEFD5AB198F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Controllers", "MoviesApp\Source\Movies.Controllers\Movies.Controllers.csproj", "{D214C77A-FDFF-40FB-843F-7FE4FD2FDB15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D214C77A-FDFF-40FB-843F-7FE4FD2FDB15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D214C77A-FDFF-40FB-843F-7FE4FD2FDB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D214C77A-FDFF-40FB-843F-7FE4FD2FDB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D214C77A-FDFF-40FB-843F-7FE4FD2FDB15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D214C77A-FDFF-40FB-843F-7FE4FD2FDB15} = {99F3102F-2C16-40AF-B51C-F0CB22366837}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0D573E2-A742-42A5-9467-63E5E33DC401}
+	EndGlobalSection
+EndGlobal
