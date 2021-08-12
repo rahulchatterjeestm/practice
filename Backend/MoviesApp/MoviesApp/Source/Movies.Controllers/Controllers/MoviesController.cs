@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Movies.Models.Models;
 using Movies.Services.Services;
@@ -21,6 +22,7 @@ namespace Movies.Controllers.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<Movie> GetAllMovies(string location = null,
                                                string language = null)
         {
@@ -29,6 +31,8 @@ namespace Movies.Controllers.Controllers
         }
 
         [HttpGet("{movieId}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public ActionResult<Movie> GetMovie([Required] string movieId)
         {
             var resultMovie = this.movieService.GetMovie(movieId);
