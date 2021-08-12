@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Movies.Models.Models;
 using Movies.Services.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -23,11 +24,19 @@ namespace Movies.Controllers.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IEnumerable<Movie> GetAllMovies(string location = null,
+        public ActionResult<IEnumerable<Movie>> GetAllMovies(string location = null,
                                                string language = null)
         {
-            this.logger.LogInformation("Request received to get all movies");
-            return this.movieService.GetMovies(location, language);
+            try
+            {
+                this.logger.LogInformation("Request received to get movies");
+                return this.movieService.GetMovies(location, language);
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.Message);
+                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            }
         }
 
         [HttpGet("{movieId}")]
