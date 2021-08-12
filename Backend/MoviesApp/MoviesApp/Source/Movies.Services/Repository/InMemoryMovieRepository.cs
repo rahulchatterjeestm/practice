@@ -11,7 +11,7 @@ namespace Movies.Services.Repository
 {
     public class InMemoryMovieRepository : IMovieRepository
     {
-        private List<Movie> movieList;
+        private readonly List<Movie> movieList;
         private readonly IQueryable<Movie> queryAble;
 
         public InMemoryMovieRepository()
@@ -39,8 +39,9 @@ namespace Movies.Services.Repository
         private List<Movie> LoadData()
         {
             List<Movie> movies;
+            var path = Environment.GetEnvironmentVariable("DB_PATH");
             //read from local json
-            using (StreamReader streamReader = new StreamReader("../Movies.Services/Repository/movies.json"))
+            using (StreamReader streamReader = new StreamReader(path))
             {
                 var json = streamReader.ReadToEnd();
                 movies = JsonConvert.DeserializeObject<List<Movie>>(json);
