@@ -11,8 +11,8 @@ namespace Movies.WebApi.uTest.Controllers
     [TestClass]
     public class MoviesControllerTest
     {
-        private Mock<IMovieService> mockMovieService;
-        private Mock<ILogger<MoviesController>> mockLogger;
+        private readonly Mock<IMovieService> mockMovieService;
+        private readonly Mock<ILogger<MoviesController>> mockLogger;
 
         public MoviesControllerTest()
         {
