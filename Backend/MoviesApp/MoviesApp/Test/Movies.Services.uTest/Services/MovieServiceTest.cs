@@ -2,10 +2,6 @@
 using Movies.Services.Repository;
 using Movies.Services.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Movies.Services.uTest.Services
 {

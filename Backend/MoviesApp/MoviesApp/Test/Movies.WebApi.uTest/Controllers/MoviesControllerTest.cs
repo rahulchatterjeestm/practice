@@ -4,11 +4,7 @@ using Moq;
 using Movies.Models.Models;
 using Movies.Services.Services;
 using Movies.WebApi.Controllers;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Movies.WebApi.uTest.Controllers
 {
