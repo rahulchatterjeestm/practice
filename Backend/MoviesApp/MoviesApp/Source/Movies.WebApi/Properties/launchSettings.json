@@ -8,7 +8,7 @@
       "sslPort": 44382
     }
   },
-  "profiles": {    ,
+  "profiles": {
     "Movies.Controllers": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
@@ -17,7 +17,7 @@
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "DB_JSON": "D:\\mine\\practice\\Backend\\MoviesApp\\movies.json"
+        "DB_PATH": "D:\\mine\\practice\\Backend\\MoviesApp\\movies.json"
       }
     }
   }
