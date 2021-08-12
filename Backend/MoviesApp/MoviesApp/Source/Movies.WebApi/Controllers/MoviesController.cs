@@ -50,7 +50,7 @@ namespace Movies.WebApi.Controllers
                 return NotFound();
             }
 
-            return Ok(resultMovie);
+            return resultMovie;
         }
     }
 }
