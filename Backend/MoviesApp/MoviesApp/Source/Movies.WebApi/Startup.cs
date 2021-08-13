@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Movies.Services.Repository;
 using Movies.Services.Services;
+using System.Text.Json.Serialization;
 
 namespace Movies.WebApi
 {
@@ -28,6 +29,12 @@ namespace Movies.WebApi
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Movies.Controllers", Version = "v1" });
+            });
+
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                options.JsonSerializerOptions.IgnoreNullValues = true;
             });
         }
 

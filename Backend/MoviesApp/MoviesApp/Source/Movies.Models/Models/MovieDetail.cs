@@ -9,9 +9,9 @@ namespace Movies.Models.Models
 
         public List<string> SoundEffects { get; set; }
 
-        public List<string> Stills { get; set; }    
+        public List<string> Stills { get; set; }
 
-        public ListingType ListingType { get; set; }
+        public string ListingType { get; set; }
 
         public string ImdbRating { get; set; }
     }
