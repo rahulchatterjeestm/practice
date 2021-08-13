@@ -14,7 +14,7 @@ namespace Movies.Services.Services
             this.movieRepository = movieRepository;
         }
 
-        public Movie GetMovie(string id)
+        public MovieDetail GetMovie(string id)
         {
             var query = this.movieRepository.AsQueryable();;
             query = query.Where(x => x.ImdbID == id);            
@@ -36,7 +36,7 @@ namespace Movies.Services.Services
                 query = query.Where(x => x.Language == language);
             }
 
-            return query.ToList();
+            return query.ToList<Movie>();
         }
     }
 }

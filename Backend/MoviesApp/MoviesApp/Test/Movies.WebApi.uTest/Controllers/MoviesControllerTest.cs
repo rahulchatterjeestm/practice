@@ -48,7 +48,7 @@ namespace Movies.WebApi.uTest.Controllers
 
             //setup
             this.mockMovieService.Setup(x => x.GetMovie(movieId))
-                                .Returns(new Movie
+                                .Returns(new MovieDetail
                                 {
                                     ImdbID = movieId
                                 });

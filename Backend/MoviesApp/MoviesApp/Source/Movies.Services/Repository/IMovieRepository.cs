@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Movies.Services.Repository
 {
-    public interface IMovieRepository: IQueryable<Movie>
+    public interface IMovieRepository: IQueryable<MovieDetail>
     {
     }
 }

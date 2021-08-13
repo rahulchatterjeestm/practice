@@ -5,7 +5,7 @@ namespace Movies.Services.Services
 {
     public interface IMovieService
     {
-        Movie GetMovie(string id);
+        MovieDetail GetMovie(string id);
 
         List<Movie> GetMovies(string location = null, string language = null);
     }

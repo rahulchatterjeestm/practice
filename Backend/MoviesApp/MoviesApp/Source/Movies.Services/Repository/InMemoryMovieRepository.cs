@@ -11,13 +11,13 @@ namespace Movies.Services.Repository
 {
     public class InMemoryMovieRepository : IMovieRepository
     {
-        private readonly List<Movie> movieList;
-        private readonly IQueryable<Movie> queryAble;
+        private readonly List<MovieDetail> movieList;
+        private readonly IQueryable<MovieDetail> queryAble;
 
         public InMemoryMovieRepository()
         {
             this.movieList = this.LoadData();
-            this.queryAble =  this.movieList.AsQueryable<Movie>();
+            this.queryAble =  this.movieList.AsQueryable<MovieDetail>();
         }
 
         public Type ElementType => this.queryAble?.ElementType ?? throw new ObjectDisposedException(null);
@@ -26,7 +26,7 @@ namespace Movies.Services.Repository
 
         public IQueryProvider Provider => this.queryAble?.Provider ?? throw new ObjectDisposedException(null);
 
-        public IEnumerator<Movie> GetEnumerator()
+        public IEnumerator<MovieDetail> GetEnumerator()
         {
             return this.movieList.GetEnumerator();
         }
@@ -36,15 +36,15 @@ namespace Movies.Services.Repository
             return this.movieList.GetEnumerator();
         }
 
-        private List<Movie> LoadData()
+        private List<MovieDetail> LoadData()
         {
-            List<Movie> movies;
+            List<MovieDetail> movies;
             var path = Environment.GetEnvironmentVariable("DB_PATH");
             //read from local json
             using (StreamReader streamReader = new StreamReader(path))
             {
                 var json = streamReader.ReadToEnd();
-                movies = JsonConvert.DeserializeObject<List<Movie>>(json);
+                movies = JsonConvert.DeserializeObject<List<MovieDetail>>(json);
             }
 
             return movies;

@@ -42,7 +42,7 @@ namespace Movies.WebApi.Controllers
         [HttpGet("{movieId}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<Movie> GetMovie([Required] string movieId)
+        public ActionResult<MovieDetail> GetMovie([Required] string movieId)
         {
             var resultMovie = this.movieService.GetMovie(movieId);
             if (resultMovie == null)
