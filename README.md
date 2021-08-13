@@ -10,7 +10,7 @@
 - Make more use of generic
 - Implement all CRUD functionalities
 
-#frontend
+# frontend
 - run the backend
 - ng serve to run the program
 
